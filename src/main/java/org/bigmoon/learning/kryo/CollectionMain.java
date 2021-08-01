@@ -29,7 +29,8 @@ public class CollectionMain {
     static void ListTest() throws Exception {
         List<Car> cars = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            cars.add(new Car("mbw" + i, 10d, 100000d, null));
+//            cars.add(new Car("mbw" + i, 10d, 100000d, null));
+            cars.add(new Car("mbw" + i, 10d, null));
         }
 
         Output output = new Output(new FileOutputStream("cars.txt"));

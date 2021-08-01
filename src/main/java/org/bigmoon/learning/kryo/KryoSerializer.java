@@ -23,22 +23,17 @@ import static org.bigmoon.learning.kryo.safeThread.ThreadLocalExample.kryoPool;
  */
 public class KryoSerializer {
 
-    public static void main(String[] args) throws FileNotFoundException {
-
+    public static void main(String[] args) throws Exception {
+//        CollectionMain.ListTest();
         serializeOrigObj();
     }
 
     public static void serializeOrigObj() throws FileNotFoundException {
-        Kryo kryo=new Kryo();
-        kryo.setRegistrationRequired(false);
-//        kryo.setReferences(true);
-        //默认序列化器，不支持字段变更
-        kryo.setDefaultSerializer(FieldSerializer.class);
 
         //@seeCollectionMain中创建的cars.txt对象文件，然后变更car对象字段。重新获取一次
 
         try( Input input=new Input(new FileInputStream("cars.txt"))) {
-            List<Car> cars=(List<Car>)kryo.readClassAndObject(input);
+            List<Car> cars=(List<Car>)kryoPool.obtain().readClassAndObject(input);
             System.out.println("原始数据读取完成，如下内容");
             cars.forEach(item->{
                 System.out.println(item.toString());

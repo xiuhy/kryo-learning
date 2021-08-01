@@ -17,7 +17,8 @@ public class DeepShallowMain {
         public static void main(String[] args) {
 
             Engin engin=new Engin("BMW",12);
-            Car car=new Car("BMW",5.0d,1200000d,engin);
+//            Car car=new Car("BMW",5.0d,1200000d,engin);
+            Car car=new Car("BMW",5.0d,engin);
             Kryo kryo=new Kryo();
             kryo.setRegistrationRequired(false);
             Car carShallow=kryo.copyShallow(car);

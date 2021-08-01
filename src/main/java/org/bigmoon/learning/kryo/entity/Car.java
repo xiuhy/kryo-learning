@@ -1,16 +1,21 @@
 package org.bigmoon.learning.kryo.entity;
 
+import com.esotericsoftware.kryo.kryo5.serializers.TaggedFieldSerializer;
+
+import java.util.StringJoiner;
+
 public class Car {
 
     String band;
     Double displacement;
-    Double price;
-    Engin engin;
+//    Double price;
+    public Engin engin;
+    private int maxSpeed;
 
-    public Car(String band, Double displacement, Double price, Engin engin) {
+    public Car(String band, Double displacement,  Engin engin) {
         this.band = band;
         this.displacement = displacement;
-        this.price = price;
+//        this.price = price;
         this.engin = engin;
     }
 
@@ -19,13 +24,12 @@ public class Car {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Car{");
-        sb.append("band='").append(band).append('\'');
-        sb.append(", displacement=").append(displacement);
-        sb.append(", price=").append(price);
-        sb.append(", engin=").append(engin);
-        sb.append('}');
-        return sb.toString();
+        return new StringJoiner(", ", Car.class.getSimpleName() + "[", "]")
+                .add("band='" + band + "'")
+                .add("displacement=" + displacement)
+                .add("engin=" + engin)
+                .add("maxSpeed=" + maxSpeed)
+                .toString();
     }
 
     public Engin getEngin() {
@@ -52,12 +56,19 @@ public class Car {
         this.displacement = displacement;
     }
 
-    public Double getPrice() {
-        return price;
+//    public Double getPrice() {
+//        return price;
+//    }
+//
+//    public void setPrice(Double price) {
+//        this.price = price;
+//    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
     }
-
 }

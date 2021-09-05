@@ -1,7 +1,5 @@
 package org.bigmoon.learning.kryo.entity;
 
-import com.esotericsoftware.kryo.kryo5.serializers.TaggedFieldSerializer;
-
 import java.util.StringJoiner;
 
 public class Car {

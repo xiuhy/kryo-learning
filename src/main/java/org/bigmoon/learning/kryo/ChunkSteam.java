@@ -1,12 +1,10 @@
 package org.bigmoon.learning.kryo;
 
-import com.esotericsoftware.kryo.kryo5.Kryo;
-import com.esotericsoftware.kryo.kryo5.io.InputChunked;
+import com.esotericsoftware.kryo.Kryo;
+import com.esotericsoftware.kryo.io.InputChunked;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
 
 /**
  * 这里主要实现chunk.kryo方法

@@ -1,11 +1,10 @@
 package org.bigmoon.learning.kryo.safeThread;
-
-import com.esotericsoftware.kryo.kryo5.Kryo;
-import com.esotericsoftware.kryo.kryo5.SerializerFactory;
-import com.esotericsoftware.kryo.kryo5.io.Input;
-import com.esotericsoftware.kryo.kryo5.io.Output;
-import com.esotericsoftware.kryo.kryo5.serializers.CompatibleFieldSerializer;
-import com.esotericsoftware.kryo.kryo5.util.Pool;
+import com.esotericsoftware.kryo.Kryo;
+import com.esotericsoftware.kryo.SerializerFactory;
+import com.esotericsoftware.kryo.io.Input;
+import com.esotericsoftware.kryo.io.Output;
+import com.esotericsoftware.kryo.serializers.CompatibleFieldSerializer;
+import com.esotericsoftware.kryo.util.Pool;
 import org.bigmoon.learning.kryo.entity.SomeClass;
 
 import java.io.FileInputStream;

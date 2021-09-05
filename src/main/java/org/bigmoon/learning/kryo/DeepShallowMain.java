@@ -1,6 +1,6 @@
 package org.bigmoon.learning.kryo;
 
-import com.esotericsoftware.kryo.kryo5.Kryo;
+import com.esotericsoftware.kryo.Kryo;
 import org.bigmoon.learning.kryo.entity.Car;
 import org.bigmoon.learning.kryo.entity.Engin;
 

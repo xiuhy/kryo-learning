@@ -1,7 +1,7 @@
 package org.bigmoon.learning.kryo;
 
-import com.esotericsoftware.kryo.kryo5.io.Input;
-import com.esotericsoftware.kryo.kryo5.io.Output;
+import com.esotericsoftware.kryo.io.Input;
+import com.esotericsoftware.kryo.io.Output;
 import org.bigmoon.learning.kryo.entity.Car;
 import org.bigmoon.learning.kryo.entity.TestEnum;
 

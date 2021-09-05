@@ -1,8 +1,6 @@
 package org.bigmoon.learning.kryo;
 
-import com.esotericsoftware.kryo.kryo5.Kryo;
-import com.esotericsoftware.kryo.kryo5.io.Input;
-import com.esotericsoftware.kryo.kryo5.serializers.FieldSerializer;
+import com.esotericsoftware.kryo.io.Input;
 import org.bigmoon.learning.kryo.entity.Car;
 
 import java.io.File;
@@ -25,7 +23,8 @@ public class KryoSerializer {
 
     public static void main(String[] args) throws Exception {
 //        CollectionMain.ListTest();
-        serializeOrigObj();
+//        serializeOrigObj();
+        System.out.println(CharSequence.class.isAssignableFrom(String.class));
     }
 
     public static void serializeOrigObj() throws FileNotFoundException {
